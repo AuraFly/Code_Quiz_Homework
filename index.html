@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Coding Quiz</title>
+	</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./assets/style.css">
+
+<body>
+    <header class="header">
+        <h1><img src ="./assets/AuraFlyLogo.png" alt="AuraflyLogo" id="afLogo">Coding Quiz!</h1>
+        <h2 class="timer">Time Left:</h2>
+    </header>
+
+    <section main>
+        <h3 id="mainQuestion">Coding Quiz!</h3>
+    <div class="mainsec">
+        <div class="start">
+            <p><i>After quiz starts, click on the selection you think best answers the question!
+            </i></p>
+            <p><i>Careful! Each time you get a question wrong you will lose 5 seconds!</i></p>
+            <p id ="ctoStart">Click to Start!
+            </p>
+            <button id="startBtn">Start Quiz!</button>
+        </div>
+     <ol class="mainol">
+         <li id="li1">PH</li>
+         <li id="li2">PH</li>
+         <li id="li3">PH</li>
+         <li id="li4">PH</li>
+     </ol>
+    </div>
+    <div class="textBox">
+        <label for="nameField">Enter your name:</label>
+        <br>
+        <textarea id="nameField" name="nameF"></textarea>
+        <br>
+        <button id="nameBtn">Submit Score</button>
+    </div>
+    <button id="resetBtn" onClick="window.location.reload();">Play Again?</button>
+    </section>
+
+<footer class="footer">
+    <h6>AuraFly Coding Quiz! Created by Jordan Covarrubias</h6>
+</footer>
+<script src="./assets/script.js"></script>
+</body>
+</html>
