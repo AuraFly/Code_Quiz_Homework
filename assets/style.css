@@ -1,8 +1,10 @@
-
+/*Main body style*/
 body {
     background-color: black;
     color: greenyellow;
 }
+
+
 /* The following sections control the header stylization and links*/
 .header {
     display: flex;
@@ -38,6 +40,8 @@ body {
     padding-right: 1%;
 }
 
+
+/*Styles the main header for the page, usually displaying the question*/
 #mainQuestion {
     font-size: 30px;
     font-weight: bolder;
@@ -46,6 +50,7 @@ body {
     text-align: center;
 }
 
+/*Styles the main container for the page and houses most elements*/
 .mainsec {
     display: flex;
     flex-direction: column;
@@ -107,7 +112,7 @@ border-color: greenyellow;
 background-color: aquamarine;
 }
 
-/*  Stylization of start button*/
+/*  Stylization of start and reset buttons*/
 .start {
     text-align: center;
     margin-left: 20%;

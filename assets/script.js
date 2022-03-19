@@ -1,4 +1,5 @@
 // Answer key: 2, 1, 4, 4, 2, 3, 1, 3, 2, 2
+// variables calling different dom elements from within future functions.
 var timerEl = document.querySelector(".timer");
 var mainEl = document.getElementById("mainQuestion");
 var msecEl = document.querySelector(".mainsec");
@@ -11,14 +12,23 @@ var ask2 = document.getElementById("li2");
 var ask3 = document.getElementById("li3");
 var ask4 = document.getElementById("li4");
 
+
+//variables representing values tracked at the end of the quiz
 var score = 0;
 var timeLeft = 75;
 
+
+//timer variable
 var timerInterval;
 
+
+//hides main quiz and name form when the page first loads
 document.querySelector(".mainol").hidden = true;
 nameF.hidden = true;
 
+
+
+//function that kicks off when the time reaches less than or equal '0'.
 function timeUP() {
 
 mainEl.textContent = "TIME IS UP!";
@@ -27,6 +37,7 @@ mainEl.style.color = "red";
 quizOver();
 }
 
+//main timer function
 function setTime() {
     timerInterval = setInterval(function() {
     timeLeft--;
@@ -39,6 +50,9 @@ function setTime() {
     }, 1000);
 }
 
+
+//Controls the scoreboard at the end of the game by hiding prior content
+//and pulling score, name, and timeleft from local storage.
 function scoreBoard() {
     nameF.hidden = true;
     resetBtn.style.display = "flex";
@@ -51,6 +65,9 @@ function scoreBoard() {
     " points with " + localStorage.getItem("time")+ " seconds left";
 }
 
+
+//Displays initial score and time and text field for name entry when either
+// time is up or all questions are answered and stops timer.
 function quizOver(){
     clearInterval(timerInterval);
     nameF.hidden = false;
@@ -84,8 +101,10 @@ if (score >= 8) {
     }
 
 
-// Function populates eighth set of answers //
-// then kicks off to ninth question //
+// Function populates eighth set of answers
+// then kicks off to ninth question
+// if you are scrolling down you will see this same function reiterate a few times
+// with different values for questions and answers and click events.
 function qSet10() {
     ask1.hidden = false;
     ask2.hidden = false;
